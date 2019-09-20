@@ -6,6 +6,9 @@ import Profile from './components/Profile/Profile'
 import Dialogs from './components/Dialogs/Dialogs'
 import {Route} from "react-router-dom";
 import {BrowserRouter} from "react-router-dom";
+import Music from "./components/Music/Music";
+import News from "./components/News/News";
+import Settings from "./components/Settings/Settings";
 
 const App = () => {
   return(
@@ -14,9 +17,12 @@ const App = () => {
               <Header />
               <Navbar />
               <div className="app-wrapper-content">
-                  <Route component={Dialogs} />
-                  <Route component={Profile} />
-              </div>
+                  <Route path='/dialogs' component={Dialogs} />
+                  <Route path='/profile' component={Profile} />
+                  <Route path ='/music' component={Music} />
+                  <Route path='/news' component={News} />
+                  <Route path='/settings' component={Settings}/>
+                             </div>
               {/*<Profile />*/}
           </div>
       </BrowserRouter>
