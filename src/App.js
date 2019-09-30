@@ -22,7 +22,7 @@ const App = () => {
                   <Route path ='/music' component={Music} />
                   <Route path='/news' component={News} />
                   <Route path='/settings' component={Settings}/>
-                             </div>
+              </div>
               {/*<Profile />*/}
           </div>
       </BrowserRouter>
