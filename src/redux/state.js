@@ -1,13 +1,16 @@
 /**
  * Created by User-35 on 24.10.2019.
  */
-import renderEntireTree from '../render';
+let renderEntireTree = () => {
+
+};
 let state = {
     posts : [
         {id: 1, message: 'hi, how do you do?'},
         {id: 2, message: 'Hello World'},
         {id: 2, message: 'What is your name?'}
     ],
+    newPostText: "Post Text",
     dialogs : [
         {id: 1, name: 'Sasha'},
         {id: 2, name: 'Sergey'},
@@ -20,10 +23,18 @@ let state = {
         ]
 };
 export default state;
-export let addPost = (textPost) => {
+export const addPost = (textPost) => {
     state.posts.push({
         id: 4,
         message: textPost,
     });
+    state.newPostText = '';
     renderEntireTree(state);
+};
+export const updateNewPostText = (text) => {
+    state.newPostText = text;
+    renderEntireTree(state);
+};
+export const subscribe = (observer) => {
+    renderEntireTree = observer;
 };
