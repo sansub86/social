@@ -1,15 +1,16 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post'
-import {addNewPostActionCreator, updateNewPostActionCreator} from '../../../redux/state'
+import {addNewPostActionCreator, updateNewPostActionCreator} from '../../../redux/profile_reducer'
+
 const MyPosts = (props) => {
     let textPost= React.createRef();
     let addMessage = () =>{
-        props.dispatch(addNewPostActionCreator());
+        props.addPost();
     };
     let changeText = () =>{
         let text = textPost.current.value;
-        props.dispatch(updateNewPostActionCreator(text));
+        props.updateNewPostText(text);
     };
         return (
         <div className={s.postsBlock}>
