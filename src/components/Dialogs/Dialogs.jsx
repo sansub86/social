@@ -6,9 +6,7 @@ import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs_reducer"
-
 const Dialogs = (props) => {
-    debugger;
     let textMessage = React.createRef();
     let changeText = () => {
         let text = textMessage.current.value;
@@ -22,6 +20,7 @@ const Dialogs = (props) => {
             <div className={s.dialogsItems}>
                 {
                     props.dialogs.map(d => <DialogItem id={d.id} name={d.name}/>)
+
                 }
             </div>
             <div className="messages">
@@ -38,5 +37,4 @@ const Dialogs = (props) => {
         </div>
     );
 };
-
 export default Dialogs;
