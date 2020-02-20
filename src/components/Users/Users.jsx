@@ -1,6 +1,8 @@
 import React from 'react';
 import s from './Users.module.css'
-import photo from '../../default-avatar.png'
+import photo from '../../assets/default-avatar.png'
+import Preloader from "../common/Preloader/Preloader";
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
     let pages = [];
@@ -10,6 +12,8 @@ let Users = (props) => {
         pages.push(i);
     }
     return (
+        <>
+        {props.isLoading? <Preloader/>:null}
         <div>
             <div>
                 {
@@ -24,7 +28,9 @@ let Users = (props) => {
                     return <div key={u.id}>
                         <div>
                             <div>
-                                <img src={u.photos.small!=null?u.photos.small:photo} className={s.usersPhoto}/>
+                                <NavLink to={'/profile/'+u.id}>
+                                    <img src={u.photos.small!=null?u.photos.small:photo} className={s.usersPhoto}/>
+                                </NavLink>
                             </div>
                             <div>
                                 {u.followed? <button onClick={()=>props.unfollow(u.id)}>Unfollow</button>:<button onClick={()=>props.follow(u.id)}>Follow</button>}
@@ -44,6 +50,7 @@ let Users = (props) => {
                 })
             }
         </div>
+        </>
     );
 };
 

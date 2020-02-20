@@ -6,6 +6,8 @@ const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE =  'SET_CURRENT_PAGE';
 const SET_USERS_COUNT = 'SET_USERS_COUNT';
+const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING';
+
 /*let InitialState = {
     users: [
         {id: 1, photoPath: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", name: "Igor", status: "I'm a bosss", followed: true, location: {country: "Russia", city: "Moscow"}},
@@ -17,8 +19,9 @@ const SET_USERS_COUNT = 'SET_USERS_COUNT';
 let InitialState = {
     users: [],
     pageSize: 15,
-    totalUsersCount: 100,
-    currentPage: 1
+    totalUsersCount: 0,
+    currentPage: 1,
+    isLoading: false
 };
 const usersReducer = (state = InitialState, action) => {
     switch (action.type) {
@@ -51,14 +54,17 @@ const usersReducer = (state = InitialState, action) => {
         case SET_CURRENT_PAGE:
             return {...state, currentPage: action.currentPage};
         case SET_USERS_COUNT:
-            return {...state, totalUsersCount: action.totalUsersCount}
+            return {...state, totalUsersCount: action.totalUsersCount};
+        case  TOGGLE_IS_LOADING:
+            return {...state, isLoading: action.isLoading};
         default:
             return state;
     }
 };
-export const followAC = (userId) => ({type: 'FOLLOW', userId : userId});
-export const unfollowAC = (userId) => ({type: 'UNFOLLOW', userId: userId});
-export const setUsersAC = (users) => ({type: 'SET_USERS', users: users});
-export const setCurrentPageAC = (currentPage) => ({type: 'SET_CURRENT_PAGE', currentPage: currentPage});
-export const setTotalUsersCountAC = (totalUsersCount) => ({type: 'SET_USERS_COUNT', totalUsersCount: totalUsersCount});
+export const follow = (userId) => ({type: 'FOLLOW', userId : userId});
+export const unfollow = (userId) => ({type: 'UNFOLLOW', userId: userId});
+export const setUsers = (users) => ({type: 'SET_USERS', users: users});
+export const setCurrentPage = (currentPage) => ({type: 'SET_CURRENT_PAGE', currentPage: currentPage});
+export const setTotalUsersCount = (totalUsersCount) => ({type: 'SET_USERS_COUNT', totalUsersCount: totalUsersCount});
+export const toggleIsLoading = (isLoading) => ({type: 'TOGGLE_IS_LOADING', isLoading});
 export default usersReducer;
