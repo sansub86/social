@@ -67,11 +67,18 @@ const usersReducer = (state = InitialState, action) => {
             return state;
     }
 };
-export const follow = (userId) => ({type: 'FOLLOW', userId : userId});
-export const unfollow = (userId) => ({type: 'UNFOLLOW', userId: userId});
+export const followSuccess = (userId) => ({type: 'FOLLOW', userId : userId});
+export const unfollowSuccess = (userId) => ({type: 'UNFOLLOW', userId: userId});
 export const setUsers = (users) => ({type: 'SET_USERS', users: users});
 export const setCurrentPage = (currentPage) => ({type: 'SET_CURRENT_PAGE', currentPage: currentPage});
 export const setTotalUsersCount = (totalUsersCount) => ({type: 'SET_USERS_COUNT', totalUsersCount: totalUsersCount});
 export const toggleIsLoading = (isLoading) => ({type: 'TOGGLE_IS_LOADING', isLoading});
 export const toggleFollowingProgress = (isLoading, userId) => ({type: 'TOGGLE_IS_FOLLOWING_PROGRESS',isLoading, userId});
+
+export const getUsers = () => () => {
+    return {
+
+    }
+}
+
 export default usersReducer;

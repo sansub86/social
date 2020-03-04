@@ -49,7 +49,7 @@ let Users = (props) => {
                                                 }
                                                 props.toggleFollowingProgress(false, u.id);
                                             });
-                                        }
+                                            }
                                     }>Unfollow</button>:
                                     <button disabled={props.followingInProgress.some(id => id ===u.id)} onClick={
                                         ()=>{
