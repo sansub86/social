@@ -5,6 +5,8 @@ import React from 'react'
 import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs_reducer"
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
+import {WithAuthRedirect} from "../../hoc/withAuthRedirect"
+import {compose} from "redux";
 
 /*
 const DialogsContainer = (props) => {
@@ -24,7 +26,8 @@ let mapStateToProps = (state) => {
     return {
         dialogs: state.dialogsPage.dialogs,
         messages: state.dialogsPage.messages,
-        newMessageText : state.dialogsPage.newMessageText
+        newMessageText : state.dialogsPage.newMessageText,
+        isAuth: state.auth.isAuth
     }
 };
 let mapDispatchToProps = (dispatch) => {
@@ -38,6 +41,7 @@ let mapDispatchToProps = (dispatch) => {
     }
 };
 
-const DialogsContainer = connect(mapStateToProps,mapDispatchToProps)(Dialogs);
-
-export default DialogsContainer;
+export default compose(
+    WithAuthRedirect,
+    connect(mapStateToProps,mapDispatchToProps)
+)(Dialogs)

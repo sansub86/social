@@ -6,6 +6,7 @@ import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs_reducer"
+import {Redirect} from "react-router-dom";
 const Dialogs = (props) => {
     let textMessage = React.createRef();
     let changeText = () => {

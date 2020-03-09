@@ -1,6 +1,7 @@
 /**
  * Created by User-35 on 16.12.2019.
  */
+import {usersAPI as userAPI} from "../api/api";
 /**
  * Created by User-35 on 16.12.2019.
  */
@@ -44,4 +45,11 @@ const profileReducer = (state = initialState, action) => {
             return state;
     }
 };
+
+export const getUserProfile = (userId) => (dispatch) => {
+    userAPI.getUserProfile(userId).then(response => {
+        dispatch(setUserProfile(response.data));
+    });
+}
+
 export default profileReducer;
