@@ -21,7 +21,8 @@ let initialState = {
         {id: 2, message: 'What is your name?'}
     ],
     newPostText: "Post Text",
-    profile: null
+    profile: null,
+    status: ""
 };
 
 const profileReducer = (state = initialState, action) => {
