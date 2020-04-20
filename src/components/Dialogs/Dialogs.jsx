@@ -5,17 +5,14 @@ import React from 'react'
 import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs_reducer"
 import {Redirect} from "react-router-dom";
+import {AddMessageFormRedux} from "./AddMessageForm/AddMessageForm";
+
 const Dialogs = (props) => {
-    let textMessage = React.createRef();
-    let changeText = () => {
-        let text = textMessage.current.value;
-        props.updateText(text);
+    let sendMessage = (formData) => {
+        props.addMessage(formData.addNewMessageText);
     };
-    let sendMessage = () => {
-        props.addMessage();
-    };
+    if(!props.isAuth) return <Redirect to={"/login"}/>
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
@@ -31,8 +28,7 @@ const Dialogs = (props) => {
                     }
                 </div>
                 <div>
-                    <div><textarea ref={textMessage} value={props.newMessageText} onChange={changeText}></textarea></div>
-                    <div><button onClick={sendMessage}>Отправить</button></div>
+                    <AddMessageFormRedux onSubmit={sendMessage}/>
                 </div>
             </div>
         </div>

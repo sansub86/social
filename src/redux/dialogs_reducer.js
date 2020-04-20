@@ -2,9 +2,7 @@
  * Created by User-35 on 16.12.2019.
  */
 const ADD_MESSAGE = "ADD_MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE_NEW_MESSAGE_TEXT";
-export const sendMessageActionCreator = () => ({type: ADD_MESSAGE});
-export const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT,newMessageTextBody:text});
+export const sendMessageActionCreator = (newMessageText) => ({type: ADD_MESSAGE, newMessageText});
 
 let initialState = {
     dialogs: [
@@ -16,8 +14,7 @@ let initialState = {
         {id: 1, message: 'Hi', likesCount: 4},
         {id: 2, message: 'What is your name', likesCount: 7},
         {id: 3, message: 'Yo!', likesCount: 6}
-    ],
-    newMessageText: "New Message"
+    ]
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -25,13 +22,7 @@ const dialogsReducer = (state = initialState, action) => {
         case ADD_MESSAGE:
             return {
                 ...state,
-                messages: [...state.messages, {id:4, message: state.newMessageText}],
-                newMessageText: ''
-            };
-        case UPDATE_NEW_MESSAGE_TEXT:
-            return {
-                ...state,
-                newMessageText: action.newMessageTextBody
+                messages: [...state.messages, {id:4, message: action.newMessageText}],
             };
         default:
             return state;

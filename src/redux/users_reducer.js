@@ -10,14 +10,6 @@ const SET_USERS_COUNT = 'SET_USERS_COUNT';
 const TOGGLE_IS_LOADING = 'TOGGLE_IS_LOADING';
 const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
-/*let InitialState = {
-    users: [
-        {id: 1, photoPath: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", name: "Igor", status: "I'm a bosss", followed: true, location: {country: "Russia", city: "Moscow"}},
-        {id: 2, photoPath: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", name: "Sasha", status: "I'm a bosss too", followed: false, location: {country: "Russia", city: "Yaroslavl"}},
-        {id: 3, photoPath: "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png", name: "Vasya", status: "I'm a bosss too", followed: false, location: {country: "Italy", city: "Milan"}}
-    ]
-};*/
-
 let InitialState = {
     users: [],
     pageSize: 15,
