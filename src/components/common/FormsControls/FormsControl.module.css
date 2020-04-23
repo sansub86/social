@@ -5,3 +5,8 @@
 .formControl.error span {
     color: red;
 }
+.summaryError {
+    color: red;
+    text-transform: uppercase;
+    border: 1px solid red;
+}

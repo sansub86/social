@@ -68,9 +68,10 @@ export const setTotalUsersCount = (totalUsersCount) => ({type: 'SET_USERS_COUNT'
 export const toggleIsLoading = (isLoading) => ({type: 'TOGGLE_IS_LOADING', isLoading});
 export const toggleFollowingProgress = (isLoading, userId) => ({type: 'TOGGLE_IS_FOLLOWING_PROGRESS',isLoading, userId});
 
-export const getUsers = (currentPage, PageSize) => (dispatch) => {
+export const requestUsers = (page, PageSize) => (dispatch) => {
     dispatch(toggleIsLoading(true));
-    usersAPI.getUsers(currentPage, PageSize).then(data => {
+    dispatch(setCurrentPage(page));
+    usersAPI.getUsers(page, PageSize).then(data => {
         dispatch(setUsers(data.items));
         dispatch(setTotalUsersCount(data.totalCount));
         dispatch(toggleIsLoading(false));
