@@ -2,7 +2,7 @@
  * Created by User-35 on 17.12.2019.
  */
 
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import profileReducer from "./profile_reducer";
 import dialogsReducer from "./dialogs_reducer";
 import settingsReducer from "./settings_reducer";
@@ -21,8 +21,8 @@ let reducers = combineReducers({
     app: appReducer,
     form: formReducer
 });
-
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 window.store = store;
 
