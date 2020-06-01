@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef6202b-eb86-490b-9d32-e2ada1633076" name="Default" comment="81">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/User.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/object-helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoc/withSuspense.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/users_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/hoc" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,56 +49,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\comp\react\kabzda\social\src\hoc" />
       <recent name="C:\Users\comp\react\kabzda\social\src\components\Users" />
       <recent name="C:\Users\comp\react\kabzda\social\src\components\common\Paginator" />
       <recent name="C:\Users\comp\react\kabzda\social\src\components\Profile\ProfileInfo" />
       <recent name="C:\Users\comp\react\kabzda\social\src\redux" />
-      <recent name="C:\Users\comp\react\kabzda\social\src\components\common\FormsControls" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.renders without crashing">
-    <configuration name="ProfileStatus component test.Callback shoul be called" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component test" />
-        <test-name value="Callback shoul be called" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProfileStatus component test.&lt;input&gt; should be displayed in edit mode instead of &lt;span&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component test" />
-        <test-name value="&lt;input&gt; should be displayed in edit mode instead of &lt;span&gt;" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProfileStatus component test.&lt;input&gt; shouldn't displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
-      <test-names>
-        <test-name value="ProfileStatus component test" />
-        <test-name value="&lt;input&gt; shouldn't displayed" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -135,6 +79,36 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -146,19 +120,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jest.ProfileStatus component test.&lt;input&gt; shouldn't displayed" />
-      <item itemvalue="Jest.ProfileStatus component test.&lt;input&gt; should be displayed in edit mode instead of &lt;span&gt;" />
-      <item itemvalue="Jest.ProfileStatus component test.Callback shoul be called" />
       <item itemvalue="Jest.renders without crashing" />
       <item itemvalue="npm.start" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.deploy" />
+      <item itemvalue="npm.predeploy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.renders without crashing" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
-        <item itemvalue="Jest.ProfileStatus component test.Callback shoul be called" />
-        <item itemvalue="Jest.ProfileStatus component test.&lt;input&gt; should be displayed in edit mode instead of &lt;span&gt;" />
-        <item itemvalue="Jest.ProfileStatus component test.&lt;input&gt; shouldn't displayed" />
+        <item itemvalue="Jest.renders without crashing" />
       </list>
     </recent_temporary>
   </component>
@@ -188,6 +162,9 @@
       <workItem from="1588489899340" duration="92000" />
       <workItem from="1588509367565" duration="10967000" />
       <workItem from="1588562000008" duration="11780000" />
+      <workItem from="1588811217475" duration="92000" />
+      <workItem from="1589353274065" duration="72000" />
+      <workItem from="1591005744876" duration="6966000" />
     </task>
     <task id="LOCAL-00001" summary="81">
       <created>1587601659097</created>
@@ -228,28 +205,32 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="307" y="90" key="CommitChangelistDialog2/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1587601655208" />
-    <state width="1237" height="228" key="GridCell.Tab.0.bottom" timestamp="1588608263750">
+    <state x="420" y="249" key="FileChooserDialogImpl" timestamp="1589353342979">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="228" key="GridCell.Tab.0.bottom/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588608263750" />
+    <state x="420" y="249" key="FileChooserDialogImpl/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1589353342979" />
+    <state width="1237" height="228" key="GridCell.Tab.0.bottom" timestamp="1591022066499">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="228" key="GridCell.Tab.0.bottom/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1591022066499" />
     <state width="1237" height="324" key="GridCell.Tab.0.bottom/0.0.1280.984/1280.0.1600.1160@1280.0.1600.1160" timestamp="1588435781271" />
     <state width="1877" height="432" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586486454392" />
-    <state width="1237" height="228" key="GridCell.Tab.0.center" timestamp="1588608263749">
+    <state width="1237" height="228" key="GridCell.Tab.0.center" timestamp="1591022066499">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="228" key="GridCell.Tab.0.center/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588608263749" />
+    <state width="1237" height="228" key="GridCell.Tab.0.center/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1591022066499" />
     <state width="1237" height="324" key="GridCell.Tab.0.center/0.0.1280.984/1280.0.1600.1160@1280.0.1600.1160" timestamp="1588435781271" />
     <state width="1877" height="432" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586486454392" />
-    <state width="1237" height="228" key="GridCell.Tab.0.left" timestamp="1588608263749">
+    <state width="1237" height="228" key="GridCell.Tab.0.left" timestamp="1591022066499">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="228" key="GridCell.Tab.0.left/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588608263749" />
+    <state width="1237" height="228" key="GridCell.Tab.0.left/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1591022066499" />
     <state width="1237" height="324" key="GridCell.Tab.0.left/0.0.1280.984/1280.0.1600.1160@1280.0.1600.1160" timestamp="1588435781271" />
     <state width="1877" height="432" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586486454391" />
-    <state width="1237" height="228" key="GridCell.Tab.0.right" timestamp="1588608263749">
+    <state width="1237" height="228" key="GridCell.Tab.0.right" timestamp="1591022066499">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="228" key="GridCell.Tab.0.right/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588608263749" />
+    <state width="1237" height="228" key="GridCell.Tab.0.right/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1591022066499" />
     <state width="1237" height="324" key="GridCell.Tab.0.right/0.0.1280.984/1280.0.1600.1160@1280.0.1600.1160" timestamp="1588435781271" />
     <state width="1877" height="432" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586486454392" />
     <state width="1237" height="324" key="GridCell.Tab.1.bottom" timestamp="1588568207012">
@@ -312,15 +293,27 @@
     </state>
     <state width="1237" height="324" key="GridCell.Tab.3.right/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588568199214" />
     <state width="1237" height="324" key="GridCell.Tab.3.right/0.0.1280.984/1280.0.1600.1160@1280.0.1600.1160" timestamp="1588435781273" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1588811216250">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1589353309830">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1588811216250" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1589353309830" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587093640093" />
     <state x="735" y="218" width="672" height="678" key="search.everywhere.popup" timestamp="1587530673678">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="735" y="218" width="672" height="678" key="search.everywhere.popup/0.0.1280.984/1280.0.1600.1160@0.0.1280.984" timestamp="1587530673678" />
     <state x="1103" y="230" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586493871178" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/hoc/withSuspense.jsx</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
