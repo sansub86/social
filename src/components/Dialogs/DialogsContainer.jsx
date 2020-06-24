@@ -1,7 +1,6 @@
 /**
  * Created by User-35 on 07.08.2019.
  */
-import React from 'react'
 import {sendMessageActionCreator} from "../../redux/dialogs_reducer"
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";

@@ -16,7 +16,7 @@ const MyPosts = (props) => {
                 <AddNewPostRedux onSubmit={addMessage}/>
             </div>
             <div className={s.posts}>
-                {props.posts.map(p => <Post message={p.message}/>)}
+                {props.posts.map(p => <Post key={p.id} message={p.message}/>)}
             </div>
         </div>
     );

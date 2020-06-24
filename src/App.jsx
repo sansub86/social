@@ -37,7 +37,7 @@ class App extends React.Component {
                     <Route path='/music' component={Music}/>
                     <Route path='/news' component={News}/>
                     <Route path='/settings' component={Settings}/>
-                    <Route path='/users' component={() => <UsersContainer/>}/>
+                    <Route path='/users' component={() => <UsersContainer pageTitle={"Самураи"}/>}/>
                     <Route path='/login' render={() => <Login/>}/>
                 </div>
             </div>

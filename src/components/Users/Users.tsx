@@ -2,8 +2,21 @@ import React from 'react';
 import Preloader from "../common/Preloader/Preloader";
 import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
+import {UserType} from "../../types/types";
 
-let Users = (props) => {
+type Props = {
+    totalUsersCount: number
+    pageSize: number
+    currentPage: number
+    onPageChange: (pageNumber: number) => void
+    users: Array<UserType>
+    followingInProgress: Array<number>
+    follow: (userId: number) => void
+    unfollow: (userId: number) => void
+    isLoading: boolean
+}
+
+let Users: React.FC<Props> = (props) => {
     return (
         <div>
             {props.isLoading ? <Preloader/> : null}
