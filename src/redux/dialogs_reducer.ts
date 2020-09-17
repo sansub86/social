@@ -1,12 +1,9 @@
 /**
  * Created by User-35 on 16.12.2019.
  */
-const ADD_MESSAGE = "ADD_MESSAGE";
-type SendMessageActionCreatorType = {
-    type: typeof ADD_MESSAGE
-    newMessageText: string
-}
-export const sendMessageActionCreator = (newMessageText: string):SendMessageActionCreatorType => ({type: ADD_MESSAGE, newMessageText});
+import {InferActionsTypes} from "./redux-store";
+const ADD_MESSAGE = "SN/DIALOGS/ADD_MESSAGE";
+
 type DialogType = {
     id:number
     name: string
@@ -16,6 +13,7 @@ type MessageType = {
     message: string
     likesCount: number
 }
+
 let initialState = {
     dialogs: [
         {id: 1, name: 'Sasha'},
@@ -26,11 +24,13 @@ let initialState = {
         {id: 1, message: 'Hi', likesCount: 4},
         {id: 2, message: 'What is your name', likesCount: 7},
         {id: 3, message: 'Yo!', likesCount: 6}
-    ] as Array<MessageType>
+    ] as Array<MessageType>,
 };
-export type initialStateType = typeof initialState;
 
-const dialogsReducer = (state = initialState, action:any):initialStateType => {
+export const actions = {
+    sendMessage: (newMessageText: string) => ({type: ADD_MESSAGE, newMessageText} as const)
+};
+const dialogsReducer = (state = initialState, action:ActionsType):InitialStateType => {
     switch (action.type) {
         case ADD_MESSAGE:
             return {
@@ -41,4 +41,6 @@ const dialogsReducer = (state = initialState, action:any):initialStateType => {
             return state;
     }
 };
+export type InitialStateType = typeof initialState;
+type ActionsType = InferActionsTypes<typeof actions>
 export default dialogsReducer

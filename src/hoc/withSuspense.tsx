@@ -1,8 +1,8 @@
 import React, {Suspense} from 'react';
 import Preloader from "../components/common/Preloader/Preloader";
 
-export const withSuspense = (Component) => {
-    return ((props) => {
+export function withSuspense<WCP>(Component: React.ComponentType<WCP>){
+    return ((props: WCP) => {
             return (
                 <Suspense fallback = {<Preloader/>}>
                     <Component {...props} />
@@ -10,4 +10,4 @@ export const withSuspense = (Component) => {
             );
         }
     );
-};
+}

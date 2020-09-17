@@ -4,12 +4,12 @@ import s from './Paginator.module.css'
 type Props = {
     totalItemsCount: number
     pageSize: number
-    currentPage: number
-    onPageChange: (p:number) => void
+    currentPage?: number
+    onPageChange?: (p:number) => void
     portionSize?: number
 }
 
-let Paginator: React.FC<Props> = ({totalItemsCount, pageSize, currentPage, onPageChange, portionSize = 10}) => {
+let Paginator: React.FC<Props> = ({totalItemsCount, pageSize, currentPage, onPageChange = () => {}, portionSize = 10}) => {
     let pages: Array<number> = [];
     let pagesNumber = Math.ceil(totalItemsCount / pageSize);
 
@@ -24,7 +24,7 @@ let Paginator: React.FC<Props> = ({totalItemsCount, pageSize, currentPage, onPag
         <div>
             {portionNumber > 1 && <button onClick={() => setPortionNumber(portionNumber - 1)}>PREV</button>}
             {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber).map(p => {
-                return <span className={currentPage === p?s.pageSelected:undefined} onClick={() => {
+                return <span key={p} className={currentPage === p?s.pageSelected:undefined} onClick={() => {
                     onPageChange(p)
                 }}> {p} </span>
             })

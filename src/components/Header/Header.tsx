@@ -5,7 +5,14 @@ import React from 'react';
 import s from './Header.module.css';
 import {NavLink} from "react-router-dom";
 
-const Header = (props) =>{
+export type MapStateToPropsType = {
+    isAuth: boolean
+    login: string | null
+}
+export type DispatchPropsType = {
+    logout: () => void
+}
+const Header: React.FC<MapStateToPropsType & DispatchPropsType> = (props) =>{
     const onLogout = () => {
         props.logout();
     };
